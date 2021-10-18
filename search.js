@@ -35,6 +35,8 @@ let data= await res.json();
        let p1=document.createElement("h3");
        p1.textContent=element.title;
 
+     
+
        let image=document.createElement("img");
        image.src=element.urlToImage;
        
