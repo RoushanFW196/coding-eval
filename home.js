@@ -36,7 +36,7 @@
      p2.textContent=element.content;
 
      let p3=document.createElement("p");
-     p3.textContent=element.content;
+     p3.textContent=element.description;
 
      let image=document.createElement("img");
      image.src=element.urlToImage;
@@ -45,7 +45,7 @@
      let p4=document.createElement("a");
      p4.href=element.url;
        p4.textContent="Read More"
-     newsdiv.append(p1,image,p2,p3,p4)
+     newsdiv.append(p1,image,p3,p2,p4)
   newsdiv.onclick=detailnews;
  
   document.getElementById("newscontainer").append(newsdiv)
@@ -58,7 +58,9 @@
 
 
  function detailnews(){
-     window.location.href=news.html;
+
+     window.location.href="news.html";
+     
  }
 
 
