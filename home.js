@@ -63,7 +63,9 @@
      
  }
 
-
+ document.getElementById("newssearch").addEventListener("click",function(){
+   window.location.href="search.html"
+ })
 
 
 
