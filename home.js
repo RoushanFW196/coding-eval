@@ -3,23 +3,29 @@
    
     let res= await fetch(`http://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=4c16ccefc2524a2dad09158632f7861d`);
      let news_data= await res.json();
-     console.log(news_data.articles)
-    // return news_data;
+   let newsarr=news_data.articles;
+    // return newsarr;
+   // shownews(news_data)
    
+    console.log(newsarr)
+
+    shownews(newsarr)
+
    }
 
+  newshome()
+ 
 
-   newshome();
-
-
+ 
 
 
   // 4c16ccefc2524a2dad09158632f7861d
 
-   function shownews(arrnews){
+   function shownews(newsarr){
 
+    //newsdiv.innerHtml==null;
 
-arrnews.forEach(element => {
+    newsarr.forEach(element => {
     
      let newsdiv=document.createElement("div");
 
@@ -35,7 +41,14 @@ arrnews.forEach(element => {
      let image=document.createElement("img");
      image.src=element.urlToImage;
 
-     newsdiv.append(p1,image,p2,p3)
+
+     let p4=document.createElement("a");
+     p4.href=element.url;
+       p4.textContent="Read More"
+     newsdiv.append(p1,image,p2,p3,p4)
+  
+ 
+
 
 
   document.getElementById("newscontainer").append(newsdiv)
@@ -47,8 +60,10 @@ arrnews.forEach(element => {
    }
 
 
+ 
 
-   
+
+
 
 
 
