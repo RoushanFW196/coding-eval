@@ -46,11 +46,8 @@
      p4.href=element.url;
        p4.textContent="Read More"
      newsdiv.append(p1,image,p2,p3,p4)
-  
+  newsdiv.onclick=detailnews;
  
-
-
-
   document.getElementById("newscontainer").append(newsdiv)
 
 
@@ -60,7 +57,9 @@
    }
 
 
- 
+ function detailnews(){
+     window.location.href=news.html;
+ }
 
 
 
